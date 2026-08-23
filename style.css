@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", "SF Pro Display", sans-serif;
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-container {
+    max-width: 420px;
+    width: 100%;
+    padding: 0 0 20px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#entryPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    padding: 40px 0 30px 0;
+    min-height: 90vh;
+}
+.entry-header {
+    margin-bottom: 32px;
+}
+.entry-header h1 {
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+.entry-header .sub {
+    font-size: 14px;
+    font-weight: 300;
+    color: #888888;
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+.entry-header .sub-en {
+    font-size: 12px;
+    font-weight: 300;
+    color: #444444;
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+}
+.entry-quote {
+    padding: 24px 0;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 28px;
+    width: 100%;
+}
+.entry-quote p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #dddddd;
+}
+.entry-quote .en {
+    font-size: 13px;
+    font-weight: 300;
+    color: #555555;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+.entry-quote .source {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #444444;
+    letter-spacing: 0.5px;
+}
+.entry-mountains {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 300;
+    color: #666666;
+    letter-spacing: 0.5px;
+    margin-bottom: 44px;
+}
+.entry-mountains .mountain-icon {
+    font-size: 16px;
+    color: #888888;
+}
+.entry-mountains .divider {
+    color: #333333;
+}
+.entry-mountains span {
+    color: #666666;
+}
+.entry-btn {
+    width: 100%;
+    max-width: 220px;
+    padding: 16px 0;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.entry-btn:active {
+    background: #1a1a1a;
+    transform: scale(0.97);
+}
+.entry-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #0d0d0d;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.entry-footer .cn {
+    font-size: 14px;
+    font-weight: 300;
+    color: #555555;
+    letter-spacing: 4px;
+}
+.entry-footer .en {
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+    color: #2a2a2a;
+    margin-top: 4px;
+    letter-spacing: 2px;
+}
+#learningPage {
+    display: none;
+    flex: 1;
+}
+.header {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 14px;
+    position: relative;
+}
+.header .back-btn {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background: transparent;
+    border: none;
+    color: #888888;
+    font-size: 13px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 2px 0;
+    letter-spacing: 0.5px;
+}
+.header .back-btn:active {
+    color: #ffffff;
+}
+.header h1 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+}
+.header .sub {
+    font-size: 11px;
+    font-weight: 300;
+    color: #888888;
+    text-align: center;
+    margin-top: 2px;
+}
+.header .sub-en {
+    font-size: 10px;
+    font-weight: 300;
+    color: #444444;
+    text-align: center;
+    margin-top: 1px;
+}
+.global-progress {
+    margin-bottom: 14px;
+}
+.global-progress .progress-track {
+    width: 100%;
+    height: 2px;
+    background: #1a1a1a;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.global-progress .progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+.global-progress .progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 300;
+    color: #555555;
+}
+.global-progress .progress-label .en {
+    color: #333333;
+}
+.mountain-strip {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 0 14px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #111111;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+.mountain-strip::-webkit-scrollbar {
+    display: none;
+}
+.mountain-tab {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    background: transparent;
+    color: #555555;
+    font-size: 11px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+.mountain-tab:active {
+    transform: scale(0.95);
+}
+.mountain-tab.active {
+    border-color: #ffffff;
+    color: #ffffff;
+    background: #1a1a1a;
+}
+.mountain-tab.done {
+    border-color: #444444;
+    color: #888888;
+}
+#mountainContent {
+    margin-top: 6px;
+    flex: 1;
+}
+.mountain-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 0 6px;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 12px;
+}
+.mountain-header h2 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #dddddd;
+}
+.mountain-header .sub {
+    font-size: 11px;
+    font-weight: 300;
+    color: #555555;
+}
+.mountain-header .status {
+    font-size: 11px;
+    color: #444444;
+}
+.mountain-progress {
+    margin-bottom: 14px;
+}
+.mountain-progress .track {
+    width: 100%;
+    height: 1px;
+    background: #1a1a1a;
+    border-radius: 1px;
+    overflow: hidden;
+}
+.mountain-progress .fill {
+    height: 100%;
+    background: #666666;
+    border-radius: 1px;
+    transition: width 0.4s ease;
+}
+.mountain-progress .label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 300;
+    color: #444444;
+}
+.mountain-progress .label .en {
+    color: #2a2a2a;
+}
+.chapter-nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #111111;
+}
+.chapter-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #2a2a2a;
+    background: transparent;
+    color: #555555;
+    font-size: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chapter-dot.active {
+    border-color: #ffffff;
+    color: #ffffff;
+    background: #1a1a1a;
+}
+.chapter-dot.done {
+    border-color: #444444;
+    color: #666666;
+}
+.chapter-dot:active {
+    transform: scale(0.92);
+}
+.content-card {
+    padding: 14px 0;
+    border-bottom: 1px solid #111111;
+    margin-bottom: 14px;
+}
+.content-card:last-of-type {
+    border-bottom: none;
+}
+.content-card .label {
+    font-size: 10px;
+    font-weight: 300;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.content-card .label .en {
+    color: #2a2a2a;
+}
+.content-card h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+.content-card h3 .en {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    color: #555555;
+    margin-top: 2px;
+}
+.content-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #aaaaaa;
+    line-height: 1.9;
+    margin-top: 6px;
+}
+.content-card p .en {
+    display: block;
+    font-size: 12px;
+    color: #444444;
+    line-height: 1.7;
+    margin-top: 3px;
+}
+.nishi-tip {
+    margin-top: 10px;
+    padding: 12px 14px;
+    border-left: 2px solid #555555;
+    background: #0a0a0a;
+}
+.nishi-tip .label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+.nishi-tip .label .en {
+    color: #3a3a3a;
+}
+.star-line-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+.star-line-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: #777777;
+    stroke-width: 1.2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.nishi-tip p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-top: 0;
+}
+.nishi-tip p .en {
+    font-size: 12px;
+    color: #555555;
+}
+.chapter-done-label {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #555555;
+}
+.action-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #1a1a1a;
+}
+.btn {
+    flex: 1;
+    padding: 11px 0;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 300;
+    background: transparent;
+    color: #888888;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.btn-primary {
+    border-color: #555555;
+    color: #ffffff;
+}
+.btn-primary:active {
+    background: #1a1a1a;
+    transform: scale(0.98);
+}
+.btn-secondary:active {
+    background: #0d0d0d;
+}
+.feedback {
+    margin-top: 12px;
+    font-size: 11px;
+    font-weight: 300;
+    color: #444444;
+    text-align: center;
+    padding: 8px 0;
+}
+.feedback .en {
+    display: block;
+    font-size: 10px;
+    color: #2a2a2a;
+    margin-top: 2px;
+}
+.footer-logo {
+    margin-top: 28px;
+    text-align: center;
+    padding-top: 14px;
+    border-top: 1px solid #0d0d0d;
+    letter-spacing: 3px;
+}
+.footer-logo .cn {
+    font-size: 14px;
+    font-weight: 300;
+    color: #555555;
+    letter-spacing: 4px;
+}
+.footer-logo .en {
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+    color: #2a2a2a;
+    margin-top: 4px;
+    letter-spacing: 2px;
+}

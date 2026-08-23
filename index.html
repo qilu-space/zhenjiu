@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>针灸大成 · 八座山</title>
+    <meta name="description" content="倪海厦《针灸大成》理论篇 · 八座山双语学习">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="针灸八座山">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container" id="app">
+
+    <!-- ===== 首页 ===== -->
+    <div id="entryPage">
+        <div class="entry-header">
+            <h1>针灸大成 · 八座山</h1>
+            <div class="sub">Eight Mountains · Theory of Acupuncture</div>
+            <div class="sub-en">倪海厦 · 理论篇</div>
+        </div>
+        <div class="entry-quote">
+            <p>“先懂中医的本质与道理，<br>再谈针灸的技法与临床。”</p>
+            <div class="en">"Understand the essence of TCM first,<br>then talk about techniques and clinical practice."</div>
+            <span class="source">—— 倪海厦</span>
+        </div>
+        <div class="entry-mountains">
+            <span class="mountain-icon">⛰</span>
+            <span>八座山</span>
+            <span class="divider">·</span>
+            <span>33 章</span>
+            <span class="divider">·</span>
+            <span>双语教学</span>
+        </div>
+        <button class="entry-btn" id="enterBtn">进入学习 →</button>
+        <div class="entry-footer">
+            <span class="cn">三 径</span>
+            <span class="en">sanjing</span>
+        </div>
+    </div>
+
+    <!-- ===== 学习页 ===== -->
+    <div id="learningPage" style="display:none;">
+        <div class="header">
+            <button class="back-btn" id="backBtn">← 返回</button>
+            <h1>针灸大成 · 八座山</h1>
+            <div class="sub">Eight Mountains · Theory of Acupuncture</div>
+            <div class="sub-en">先懂中医的本质与道理</div>
+        </div>
+        <div class="global-progress">
+            <div class="progress-track">
+                <div class="progress-fill" id="globalFill" style="width:0%;"></div>
+            </div>
+            <div class="progress-label">
+                <span id="globalText">总进度 · 0%</span>
+                <span class="en" id="globalEN">Overall progress</span>
+            </div>
+        </div>
+        <div class="mountain-strip" id="mountainStrip"></div>
+        <div id="mountainContent"></div>
+        <div class="footer-logo">
+            <span class="cn">三 径</span>
+            <span class="en">sanjing</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
